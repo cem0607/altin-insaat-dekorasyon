@@ -7,7 +7,7 @@ function save(file,data){const p=path.join(ROOT,file);let a=[];try{a=JSON.parse(
 async function sendNotification(x){
   const apiKey=process.env.RESEND_API_KEY;
   const to=process.env.NOTIFY_EMAIL;
-  if(!apiKey||!to){console.log("E-posta bildirimi ayarlı değil.");return {sent:false,reason:"not_configured"}}
+  if(!apiKey||!to){console.log("E-posta bildirimi ayarlı değil. API anahtarı:",!!apiKey,"hedef:",!!to);return {sent:false,reason:"not_configured"}}
   const subject=x.type==="talep"?"Yeni müşteri talebi - "+(x.category||"Hizmet"):x.type==="şikayet"?"Yeni şikayet / geri bildirim":"Yeni müşteri memnuniyet geri bildirimi";
   const lines=[
     "ALTIN İNŞAAT DEKORASYON - Yeni Kayıt","",
@@ -43,7 +43,7 @@ async function handle(req,res){
       if(!["talep","memnuniyet","şikayet"].includes(type))return json(res,400,{error:"geçersiz kayıt tür"});
       const saved=save(type==="talep"?"requests.json":"feedback.json",x);
       const notification=await sendNotification(saved);
-      json(res,200,{ok:true,saved:true,notification:notification.sent});
+      json(res,200,{ok:true,saved:true,notification:notification.sent,notificationReason:notification.reason||null});
     }catch(e){console.error(e);json(res,400,{error:"geçersiz veri"})}
   })
 }
