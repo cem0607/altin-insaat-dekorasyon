@@ -5,4 +5,11 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://altin-insaat-dekorasyon.onrender.com/su-tesisati-ankara</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://altin-insaat-dekorasyon.onrender.com/elektrik-ankara</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://altin-insaat-dekorasyon.onrender.com/mobilya-ankara</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://altin-insaat-dekorasyon.onrender.com/tadilat-dekorasyon-ankara</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://altin-insaat-dekorasyon.onrender.com/tamirat-ankara</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://altin-insaat-dekorasyon.onrender.com/altyapi-ankara</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://altin-insaat-dekorasyon.onrender.com/ic-kapi-ankara</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
